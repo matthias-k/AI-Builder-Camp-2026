@@ -97,4 +97,6 @@ Pick any:
   on execution traces and keeps a Pareto front of candidates, and it's available in DSPy
   (`dspy.GEPA`). Run it on the dev set and compare its best prompt against your Step 4
   prompt, counting the tokens it spends — and, as with the other options, reconstruct from
-  the r3 graph what it tried.
+  the r3 graph what it tried. We've run GEPA for prompt optimization in the lab — worth a
+  try, though the reflector model you pick and keeping prompts short mattered as much as the
+  search itself.
