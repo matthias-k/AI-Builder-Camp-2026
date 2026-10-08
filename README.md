@@ -13,7 +13,7 @@ That is what r3 is for: a framework for making research results tracked, provena
 
 ## What we provide
 
-API keys for lab-hosted open-weight LLMs, served through the Tübingen MLCloud **LiteLLM** proxy (OpenAI-compatible). We hand out keys at the start of the first work session. They power one of the example tasks ("How much is a prompt worth?") and ellamind's harness session.
+API keys for lab-hosted open-weight LLMs, served through the Tübingen MLCloud **LiteLLM** proxy (OpenAI-compatible). We hand out keys at the start of the first work session. They power some of the example tasks and ellamind's harness session.
 
 ## At the camp
 
