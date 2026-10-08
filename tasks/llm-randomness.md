@@ -11,6 +11,8 @@ most of its mass on a couple of digits whatever you ask — a GPT-2-class model 
 "0" and "1" regardless of the target, a raw token prior, not a calculation. Phrasing moves the
 result, and the model *ranking* can flip with it. Everything is tracked in r3.
 
+**Stuck?** There's a short companion of optional, mildly spoiler-y [hints](llm-randomness-hints.md) for the points sessions tend to trip on.
+
 **Setup:** r3 (see the [tutorial](https://kalliope2.matthias-k.org/bethgelab/r3-tutorial/playbook.html), §1) and an API key for the lab-hosted models
 (`deepseek-ai/DeepSeek-V4.1-Flash`, `google/gemma-4-31B-it-qat-w4a16-ct`,
 `Qwen/Qwen3.6-35B-A3B`). They are served through an OpenAI-compatible LiteLLM proxy, so the
@@ -54,6 +56,12 @@ LiteLLM endpoint. Pick one simple ask — uniform over a small range, or a digit
 lot, histogram the answers, measure the distance from uniform (KL divergence, a chi-square
 goodness-of-fit, entropy), and report the model's favorite values.
 
+**Read it straight when you can.** The clean way to measure a next-token distribution is to
+read it directly from the model's token logprobs: one call, no sampling noise. If the LiteLLM
+endpoint exposes logprobs (many vLLM backends do), prefer that for the distribution; sampling
+is the dependable fallback when it doesn't, and you still need it for the sequence and
+autocorrelation questions in Step 4.
+
 **Step 3 — What moves it?** Vary one thing at a time — temperature, prompt phrasing, thinking
 on/off, model — each as its own query job. *Report:* the distance-to-uniform across
 configurations. Does it improve? Do the three lab models share the same favorites, and does
@@ -71,10 +79,10 @@ even independent? *Report:* how close can it get, and does a better-worded promp
   overhead in model calls per accepted sample.
 - **Widen the range.** Push from 0–9 to 1–100 or wider. Do the favorites survive, and does the
   distance grow?
-- **One call vs. thousands.** If the endpoint exposes token logprobs (`logprobs` /
-  `top_logprobs`), you can read the whole next-token distribution in a single call instead of
-  sampling. Compare that readout to your sampled estimate — how many samples does it take to
-  agree?
+- **One call vs. thousands.** When you have the Step 2 logprobs readout and a sampled
+  histogram of the same ask, put the two estimates side by side (`logprobs` / `top_logprobs`
+  against the sampled distribution): how many samples does it take for sampling to agree with
+  the single-call readout?
 - **Connect it to prompt optimization.** The sibling task [*How much is a prompt
   worth?*](./prompt-sensitivity.md) optimizes a prompt against a score; its GEPA direction
   would optimize one against exactly this distance-to-target.

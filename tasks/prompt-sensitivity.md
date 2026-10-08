@@ -8,6 +8,8 @@ numbers, and how much can you gain by optimizing the prompt, or the harness arou
 model? You get a detailed starting point, then choose where to take it. Everything is
 tracked in r3.
 
+**Stuck?** There's a short companion of optional, mildly spoiler-y [hints](prompt-sensitivity-hints.md) for the points sessions tend to trip on.
+
 **Setup:** r3 (see the [tutorial](https://kalliope2.matthias-k.org/bethgelab/r3-tutorial/playbook.html), §1) and an API key for the lab-hosted models
 (`deepseek-ai/DeepSeek-V4.1-Flash`, `google/gemma-4-31B-it-qat-w4a16-ct`,
 `Qwen/Qwen3.6-35B-A3B`). They are served through an OpenAI-compatible LiteLLM proxy, so the
