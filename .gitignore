@@ -4,3 +4,12 @@
 *~
 .DS_Store
 
+
+# kickoff tutorial deck: generated QA renders
+kickoff-tutorial/qa/
+
+# python bytecode (build.py)
+__pycache__/
+
+# saved copy of the Roadmap v2 deck page, source for the S06 figure; not tracked
+/Roadmap v2 Builders Camp.html

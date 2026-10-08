@@ -1,6 +1,6 @@
 # AI Builders Camp
 
-This camp is about agentic science: driving your own AI coding agent through a real research project, hands-on, and seeing how far that gets you. We also want to learn together where this way of working helps and where it breaks. Research done this way is only useful if you can trust and reproduce what the agent did.
+This camp is about agentic science: driving your own AI coding agent through a real research project, hands-on, and seeing how far that gets you. We also want to learn together where this way of working helps and where it breaks. Research done this way is only useful if you can trust and reproduce what the agent did. The fastest way to stay in that loop is low-tech: read the reports your agent writes and look at the figures — that is where a wrong turn shows up first.
 
 That is what r3 is for: a framework for making research results tracked, provenanced, and reliable. Ever had a vague memory of an analysis you did a while back, only to find you can't locate it anymore, or it no longer runs? r3 organizes and tracks all your experiments and results, tells you for each number and each plot in the final paper exactly where it came from, and helps you and your agents keep an overview of everything you did. It scales from quick-and-dirty early experiments to large, long-running ones, project pivots, and the resulting paper, without getting in your way.
 

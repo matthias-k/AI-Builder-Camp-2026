@@ -8,6 +8,8 @@ and track everything in r3: environment, data, code, results, and reports.
 
 Work with your coding agent or by hand. Everything runs on a laptop CPU.
 
+**Stuck?** There's a short companion of optional, mildly spoiler-y [hints](natural-image-statistics-hints.md) for the points sessions tend to trip on.
+
 **Setup:** r3 (see the [tutorial](https://kalliope2.matthias-k.org/bethgelab/r3-tutorial/playbook.html), §1). Your compute-environment job (Step 1) provides Quarto and the Python packages, so you don't install those yourself.
 
 **What good agentic r3 work looks like**
@@ -79,7 +81,11 @@ over the one before? How much of ICA's gain would any whitening basis already gi
 ## Stretch goals
 
 - **Deep models:** can a neural network do better? You need a model that gives you log
-  likelihoods, e.g. a normalizing flow; small ones train fine on a CPU. Does it beat ICA?
-- **No filters at all:** whiten, then model only the length ‖z‖ of each whitened patch
-  (e.g. with a gamma distribution). How does this model compare to ICA?
+  likelihoods, e.g. a normalizing flow; small ones train fine on a CPU. On this little
+  data a flow on raw patches overfits easily — does building the known structure in first
+  (say, a flow on the whitened residual) help it actually beat ICA?
+- **No filters at all:** notice how heavy-tailed the whitened marginals are — that spread
+  is per-patch contrast, not orientation. Whiten, then model only the length ‖z‖ of each
+  whitened patch (e.g. with a gamma distribution), and compare it to ICA. How much is
+  contrast alone worth?
 - **Larger patches** (12×12, 16×16): does the gap between the models grow or shrink?
