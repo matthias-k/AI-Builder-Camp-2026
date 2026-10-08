@@ -7,7 +7,13 @@ That is what r3 is for: a framework for making research results tracked, provena
 ## Before you arrive
 
 - Bring a **coding agent** — Claude Code, Codex, or similar. This is what you'll drive.
-- Install the **r3 toolchain**: https://github.com/matthias-k/r3-tooling. It also installs the two repos it builds on, worth a look:
+- Install the **r3 toolchain** from its **`builder-camp`** branch (it has camp-specific tweaks): https://github.com/matthias-k/r3-tooling/tree/builder-camp. The one-liner:
+
+  ```
+  curl -fsSL https://raw.githubusercontent.com/matthias-k/r3-tooling/builder-camp/bootstrap.sh | bash
+  ```
+
+  It also installs the two repos it builds on, worth a look:
   - **r3** — the provenance engine itself: https://github.com/mtangemann/r3
   - **foreman** — for browsing jobs, their dependency graph, and reports: https://github.com/matthias-k/foreman-ai-builder-camp
 - Skim the **r3 tutorial**: https://kalliope2.matthias-k.org/bethgelab/r3-tutorial/playbook.html
