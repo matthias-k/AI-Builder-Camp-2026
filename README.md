@@ -17,10 +17,16 @@ API keys for lab-hosted open-weight LLMs, served through the Tübingen MLCloud *
 
 ## At the camp
 
-We start with the r3 tutorial. After that the work sessions are yours: bring your own research project, or pick one of the [example tasks](tasks/README.md). Whatever you work on, track it in r3.
+We start with the r3 tutorial. After that the work sessions are yours: bring your own research project, or pick one of the **example tasks** below. Whatever you work on, track it in r3.
 
 ellamind also runs a **"build your own harness"** tutorial: you run evaluation tasks on a subset of public [Terminal-Bench](https://www.tbench.ai) tasks with their Harbor harness — seeing how an environment is built, how tasks run, and how results are analyzed — then build and extend your own agent harness. It uses the same lab-hosted models.
 
-## Repo map
+## Example tasks
 
-- `tasks/` — the example tasks; start at [`tasks/README.md`](tasks/README.md).
+Each gives a concrete starting point and ideas for where to take it, plus a short "stuck?" companion of hints.
+
+- [What makes a good model of natural images?](tasks/natural-image-statistics.md) — classic natural-image-statistics models (PCA/ICA/whitening/…), runs on a laptop CPU.
+- [How much is a prompt worth?](tasks/prompt-sensitivity.md) — how fragile LLM benchmark scores are to prompt formatting; uses the lab-hosted models.
+- [How random is an LLM?](tasks/llm-randomness.md) — can an LLM give you the distribution you ask for? Randomness is the easy case; uses the lab-hosted models, runs on a laptop.
+
+See also [going further with r3](tasks/going-further.md) — cross-cutting things to try on top of r3, whatever you work on — and [datasets to explore](tasks/datasets.md), laptop-sized open datasets to bring your own question to.
