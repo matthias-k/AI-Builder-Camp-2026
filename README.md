@@ -25,7 +25,7 @@ API keys for lab-hosted open-weight LLMs, served through the Tübingen MLCloud *
 
 ## At the camp
 
-We start with the r3 tutorial. After that the work sessions are yours: bring your own research project, or pick one of the **example tasks** below. Whatever you work on, track it in r3.
+We start with the r3 tutorial ([kickoff slides, PDF](kickoff-tutorial/slides.pdf)). After that the work sessions are yours: bring your own research project, or pick one of the **example tasks** below. Whatever you work on, track it in r3.
 
 ellamind also runs a **"build your own harness"** tutorial: you run evaluation tasks on a subset of public [Terminal-Bench](https://www.tbench.ai) tasks with their Harbor harness — seeing how an environment is built, how tasks run, and how results are analyzed — then build and extend your own agent harness. It uses the same lab-hosted models.
 
